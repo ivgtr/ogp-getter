@@ -1,11 +1,17 @@
 <div align="center">
   <h3>
-    OGP Getter
+    ogp-getter
   </h3>
-  <p align="center">🏄 This API returns the OGP image of the specified website.</p>
+  <p align="center">🏄 This API returns the og:image buffer of the specified website.</p>
 </div>
 
 ## Setup
+
+<div align="left">
+  <h3>
+    <img width="300" alt="ogp-getter" src="https://ogp-getter.vercel.app/api?url=https://github.com/ivgtr/ogp-getter">
+  </h3>
+</div>
 
 Change the value of `url=` to the URL from which you want to retrieve the OGP image.
 
