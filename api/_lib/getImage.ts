@@ -6,7 +6,9 @@ type OgpData = {
 };
 
 export const getImage = async (url: string) => {
-  const resp = await axios.get(url, { headers: { "User-Agent": "Twitterbot/1.0" } });
+  const resp = await axios.get(url, { headers: { "User-Agent": "Twitterbot/1.0" } }).catch(() => {
+    throw new Error("URLが不正です");
+  });
   const body = resp.data;
   const root = parse(body);
   const metaData = root.querySelectorAll("meta");

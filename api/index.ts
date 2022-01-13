@@ -10,7 +10,6 @@ export default async (request: VercelRequest & { query: Options }, response: Ver
     const image = await getImage(url);
 
     response.status(200);
-    // return response.end();
     response.setHeader("Content-Type", `image/${image.type}`);
     response.setHeader("Cache-Control", `public, max-age=${CACHE_MAX_AGE}, stale-while-revalidate`);
     return response.end(image.buffer);

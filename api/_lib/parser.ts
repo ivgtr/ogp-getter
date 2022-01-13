@@ -11,5 +11,7 @@ export type RequestQueryOptions = {
 export const parseRequest = (query: VercelRequestQuery & RequestQueryOptions) => {
   const { url } = query;
 
+  if (!url) throw new Error("URLが見つかりませんでした");
+
   return { url };
 };
